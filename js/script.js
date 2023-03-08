@@ -12,3 +12,71 @@ Trasformare la stringa foto in una immagine effettiva
 BONUS 2:
 Organizzare i singoli membri in card/schede
 */
+
+/*
+-> creare un array di objects 
+-> ogni object ha:
+° nome
+° ruolo
+° foto
+-> stampare in console
+-> stamapre nel DOM 
+-> trasformare la stringa foto in un img
+-> Organizzare i singoli membri in card/schede 
+*/
+let containerEl= document.getElementById('container')
+const teamMembers =[
+
+    {
+        name: 'Wayne Barnett',
+        role: 'Founder & CEO',
+        photo: 'img/wayne-barnett-founder-ceo.jpg'
+    },
+    {
+        name: 'Angela Caroll',
+        role: ' Chief Editor',
+        photo: 'img/angela-caroll-chief-editor.jpg'
+    },
+    {
+        name: 'Walter Gordon',
+        role: 'Office Manager',
+        photo: 'img/walter-gordon-office-manager.jpg'
+    },
+    {
+        name: 'Angela Lopez',
+        role: 'Social Media Manager',
+        photo: 'img/angela-lopez-social-media-manager.jpg'
+    },
+    {
+        name: 'Scott Estrada',
+        role: 'Developer	',
+        photo: 'img/scott-estrada-developer.jpg'
+    },
+    {
+        name: 'Barbara Ramos',
+        role: 'Graphic Designer',
+        photo: 'img/barbara-ramos-graphic-designer.jpg'
+    }
+
+];
+for(let i =0; i<teamMembers.length;i++ ){
+
+    console.log(teamMembers[i])
+
+    let card = document.createElement('div')
+
+    card.setAttribute('id','c'+i)
+
+    containerEl.append(card);
+
+    let img = document.createElement('img')
+
+    card.append(img);
+    
+    img.src+=teamMembers[i].photo
+
+    card.innerHTML+=teamMembers[i].name + '<br>'
+
+    card.innerHTML+=teamMembers[i].role 
+};
+

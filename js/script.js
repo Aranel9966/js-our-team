@@ -24,7 +24,8 @@ Organizzare i singoli membri in cardTex/schede
 -> trasformare la stringa foto in un img
 -> Organizzare i singoli membri in card/schede 
 */
-let containerEl= document.getElementById('container')
+
+let containerEl= document.getElementById('container');
 const teamMembers =[
 
     {
@@ -61,27 +62,24 @@ const teamMembers =[
 ];
 for(let i =0; i<teamMembers.length;i++ ){
 
-    console.log(teamMembers[i])
+    console.log(teamMembers[i]);
 
-    let card = document.createElement('div')
-    let cardImg = document.createElement('div')
-    let cardTex = document.createElement('div')
-    let img = document.createElement('img')
+    let card = document.createElement('div');
+    let cardImg = document.createElement('div');
+    let cardTex = document.createElement('div');
+    let img = document.createElement('img');
 
-    card.setAttribute('id','c'+i)
+    card.setAttribute('id','c'+i);
 
-    
-    
     containerEl.append(card);
     card.append(cardImg);
     cardImg.append(img);
     card.append(cardTex);
-    // cardTex.classList.add('height')
     
-    img.src+=teamMembers[i].photo
+    img.src+=teamMembers[i].photo;
 
-    cardTex.innerHTML+= 'Nome:'+ teamMembers[i].name + '<br>'
+    cardTex.innerHTML+= 'Nome: '+ teamMembers[i].name + '<br>';
 
-    cardTex.innerHTML+= 'Ruolo:'+ teamMembers[i].role 
+    cardTex.innerHTML+= 'Ruolo: '+ teamMembers[i].role ;
 };
 

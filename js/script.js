@@ -10,7 +10,7 @@ Stampare le stesse informazioni su DOM sottoforma di stringhe
 BONUS 1:
 Trasformare la stringa foto in una immagine effettiva
 BONUS 2:
-Organizzare i singoli membri in card/schede
+Organizzare i singoli membri in cardTex/schede
 */
 
 /*
@@ -64,19 +64,24 @@ for(let i =0; i<teamMembers.length;i++ ){
     console.log(teamMembers[i])
 
     let card = document.createElement('div')
+    let cardImg = document.createElement('div')
+    let cardTex = document.createElement('div')
+    let img = document.createElement('img')
 
     card.setAttribute('id','c'+i)
 
+    
+    
     containerEl.append(card);
-
-    let img = document.createElement('img')
-
-    card.append(img);
+    card.append(cardImg);
+    cardImg.append(img);
+    card.append(cardTex);
+    // cardTex.classList.add('height')
     
     img.src+=teamMembers[i].photo
 
-    card.innerHTML+=teamMembers[i].name + '<br>'
+    cardTex.innerHTML+= 'Nome:'+ teamMembers[i].name + '<br>'
 
-    card.innerHTML+=teamMembers[i].role 
+    cardTex.innerHTML+= 'Ruolo:'+ teamMembers[i].role 
 };
 

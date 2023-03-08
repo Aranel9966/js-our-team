@@ -13,7 +13,9 @@ img{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
+    justify-content: center;
+    padding: 30px 0;
 }
 .card{
     display: flex;
@@ -23,10 +25,10 @@ img{
     
 }
 #c1,#c2,#c0{
-    width: calc(100% / 3 - 30px);
+    width: calc(100% / 3 - (30px * 2));
 
 }
 #c3,#c4,#c5{
-    width: calc(100% / 3 - 30px);
+    width: calc(100% / 3 - (30px * 2));
 
 }

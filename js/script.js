@@ -26,6 +26,7 @@ Organizzare i singoli membri in cardTex/schede
 */
 
 let containerEl= document.getElementById('container');
+
 const teamMembers =[
 
     {
@@ -60,22 +61,22 @@ const teamMembers =[
     }
 
 ];
+
 for(let i =0; i<teamMembers.length;i++ ){
 
     console.log(teamMembers[i]);
 
     let card = document.createElement('div');
+    containerEl.append(card);
     let cardImg = document.createElement('div');
+    card.append(cardImg);
     let cardTex = document.createElement('div');
+    card.append(cardTex);
     let img = document.createElement('img');
+    cardImg.append(img);
 
     card.setAttribute('id','c'+i);
 
-    containerEl.append(card);
-    card.append(cardImg);
-    cardImg.append(img);
-    card.append(cardTex);
-    
     img.src+=teamMembers[i].photo;
 
     cardTex.innerHTML+= 'Nome: '+ teamMembers[i].name + '<br>';
@@ -83,3 +84,26 @@ for(let i =0; i<teamMembers.length;i++ ){
     cardTex.innerHTML+= 'Ruolo: '+ teamMembers[i].role ;
 };
 
+// ciclo con il for in 
+
+// for(let i =0; i<teamMembers.length;i++ ){
+
+//     let card = document.createElement('div');
+//     let cardTex = document.createElement('div');
+
+//     card.setAttribute('id','c'+i);
+
+//     containerEl.append(card);
+//     card.append(cardTex);
+    
+
+//     let members = teamMembers[i];
+
+//     for(let keyMembers in members){
+
+//         console.log(keyMembers)
+//         cardTex.innerText += `${keyMembers}: ${members[keyMembers]} \n `
+
+//     };
+
+// };

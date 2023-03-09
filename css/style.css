@@ -26,14 +26,14 @@ img{
 }
 
 #c1,#c2,#c0{
-    width: calc(100% / 3 - (30px * 2));
+    width: calc(100% / 3 - (30px /3 * 2));
     background-color: rgba(211, 211, 211, 0.652);
     text-align: center;
     
 }
 
 #c3,#c4,#c5{
-    width: calc(100% / 3 - (30px * 2));
+    width: calc(100% / 3 - (30px /3 * 2));
     background-color: rgba(211, 211, 211, 0.652);
 
     text-align: center;
